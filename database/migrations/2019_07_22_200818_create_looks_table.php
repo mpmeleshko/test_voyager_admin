@@ -14,11 +14,11 @@ class CreateLooksTable extends Migration
     public function up()
     {
         Schema::create('looks', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->text('name');
             $table->integer('order');
             $table->string('image_url');
-            $table->unsignedBigInteger('event_id');
+            $table->unsignedInteger('event_id');
             $table->timestamps();
 
             $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
