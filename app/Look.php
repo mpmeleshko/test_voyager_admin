@@ -12,7 +12,7 @@ class Look extends Model
         'name',
         'order',
         'image_url',
-        'event_id'
+//        'event_id'
     ];
 
     public function event()
